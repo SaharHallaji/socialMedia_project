@@ -15,6 +15,6 @@ let tweets = [{
 
 <template>
   <main>
-
+    <Tweets :tweet="tweets[0]"/>
   </main>
 </template>

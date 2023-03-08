@@ -1,4 +1,15 @@
 <script setup lang="ts">
+interface tweets {
+  name: string,
+  username: string,
+  date: string,
+  tweet: string,
+  comments: number,
+  retweets : number,
+  likes: number
+}
+const props = defineProps(['tweet'])
+const tweet:tweets = props.tweet
 </script>
 
 <template>
@@ -10,7 +21,7 @@
       <div class="tweet-header">
         <img src="https://pbs.twimg.com/profile_images/1012717264108318722/9lP-d2yM_400x400.jpg" alt="" class="avator">
         <div class="tweet-header-info">
-          Steve Schoger <span>@Steve Schoger</span><span>. Jun 27
+          {{tweet.name}} <span>@Steve Schoger</span><span>. Jun 27
       </span>
           <p>🔥 If you're tired of using outline styles for secondary buttons, a soft solid background based on the text
             color can be a great alternative.</p>
